@@ -1,26 +1,24 @@
-<?php
-/**
- * The template for displaying the footer
- *
- * Contains footer content and the closing of the #main and #page div elements.
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
-?>
-
-		</div><!-- #main -->
-		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php get_sidebar( 'main' ); ?>
-
-			<div class="site-info">
-				<?php do_action( 'twentythirteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentythirteen' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentythirteen' ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentythirteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
-
-	<?php wp_footer(); ?>
+</div><!--.container-->
+<div id="footer">
+	<footer>
+		<div class="container">
+			<?php if ( ! dynamic_sidebar( 'Footer' ) ) : ?><!--Wigitized Footer--><?php endif ?>
+			<div id="nav-footer" class="nav">
+				<nav>
+				<?php wp_nav_menu( array('theme_location' => 'footer-menu' )); /* editable within the Wordpress backend */ ?>
+				</nav>
+			</div>
+			<p class="clear"><a href="#main"><?php _e('Top'); ?></a></p>
+			<p><a href="<?php bloginfo('rss2_url'); ?>" rel="nofollow"><?php _e('Entries (RSS)'); ?></a> | <a href="<?php bloginfo('comments_rss2_url'); ?>" rel="nofollow"><?php _e('Comments (RSS)'); ?></a></p>
+			<p>&copy; <?php echo date("Y") ?> <a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>. <?php _e('All Rights Reserved.'); ?></p>
+			<p><?php _e('Built on the'); ?> <a href="http://whiteboardframework.com/">Whiteboard Framework for Wordpress</a> <span class="amp">&amp;</span> 
+			<a href="http://lessframework.com">Less Framework</a>. <?php _e('Powered by'); ?> <a href="http://wordpress.org">Wordpress</a>.</p>
+			<?php /* Whiteboard Framework is free to use. You are only required to keep a link in the CSS. We do not require a link on the site, though we do greatly appreciate it. Likewise, Less Framework is free to use. Links are not required on the website or in the CSS but are greatly appreciated. */ ?>
+		</div>
+	</footer>
+</div>
+<!-- </div> -->
+<?php wp_footer(); /* this is used by many Wordpress features and plugins to work proporly */ ?>
+ <?php /*wp_footscripts();*/ ?>
 </body>
 </html>

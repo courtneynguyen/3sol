@@ -1,50 +1,31 @@
-<?php
-/**
- * The template for displaying all pages
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages and that other
- * 'pages' on your WordPress site will use a different template.
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+<div id="content">
+	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+		<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
+			<article>
+				<h1><?php the_title(); ?></h1>
+				<?php edit_post_link('<small>Edit this entry</small>','',''); ?>
+				<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
+	
+				<div class="post-content page-content">
+					<?php the_content(); ?>
+					<?php wp_link_pages('before=<div class="pagination">&after=</div>'); ?>
+				</div><!--.post-content .page-content -->
+			</article>
 
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
+			<div id="page-meta">
+				<h3><?php _e('Written by '); the_author_posts_link() ?></h3>
+				<p class="gravatar"><?php if(function_exists('get_avatar')) { echo get_avatar( get_the_author_meta('email'), '80' ); } ?></p>
+				<p><?php _e('Posted on '); the_time('F j, Y'); _e(' at '); the_time() ?></p>
+			</div>
+		</div>
 
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+		<?php comments_template( '', true ); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<header class="entry-header">
-						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<?php endif; ?>
-
-						<h1 class="entry-title"><?php the_title(); ?></h1>
-					</header><!-- .entry-header -->
-
-					<div class="entry-content">
-						<?php the_content(); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
-					</div><!-- .entry-content -->
-
-					<footer class="entry-meta">
-						<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
-					</footer><!-- .entry-meta -->
-				</article><!-- #post -->
-
-				<?php comments_template(); ?>
-			<?php endwhile; ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
+	<?php endwhile; ?>
+</div>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+

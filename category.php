@@ -1,41 +1,38 @@
-<?php
-/**
- * The template for displaying Category pages
- *
- * @link http://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Thirteen
- * @since Twenty Thirteen 1.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-
-	<div id="primary" class="content-area">
-		<div id="content" class="site-content" role="main">
-
-		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Category Archives: %s', 'twentythirteen' ), single_cat_title( '', false ) ); ?></h1>
-
-				<?php if ( category_description() ) : // Show an optional category description ?>
-				<div class="archive-meta"><?php echo category_description(); ?></div>
-				<?php endif; ?>
-			</header><!-- .archive-header -->
-
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
-
-			<?php twentythirteen_paging_nav(); ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-		<?php endif; ?>
-
-		</div><!-- #content -->
-	</div><!-- #primary -->
-
+<div id="content">
+	<h1><?php printf( __( 'Category Archives: %s' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+	<?php echo category_description(); /* displays the category's description from the Wordpress admin */ ?>
+	
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<div class="post-single">
+			<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
+	
+			<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time(); _e(', by '); the_author_posts_link() ?></p>
+			<div class="post-excerpt">
+				<?php the_excerpt(); /* the excerpt is loaded to help avoid duplicate content issues */ ?>
+			</div>
+	
+			<div class="post-meta">
+				<p><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
+				<p><?php _e('Categories:'); ?> <?php the_category(', ') ?></p>
+				<p><?php if (the_tags('Tags: ', ', ', ' ')); ?></p>
+			</div><!--.postMeta-->
+		</div><!--.post-single-->
+	<?php endwhile; else: ?>
+		<div class="no-results">
+			<p><strong><?php _e('There has been an error.'); ?></strong></p>
+			<p><?php _e('We apologize for any inconvenience, please hit back on your browser or use the search form below.'); ?></p>
+			<?php get_search_form(); /* outputs the default Wordpress search form */ ?>
+		</div><!--noResults-->
+	<?php endif; ?>
+		
+	<div class="oldernewer">
+		<p class="older"><?php next_posts_link('&laquo; Older Entries') ?></p>
+		<p class="newer"><?php previous_posts_link('Newer Entries &raquo;') ?></p>
+	</div><!--.oldernewer-->
+	
+</div><!--#content-->
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

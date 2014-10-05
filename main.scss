@@ -1,0 +1,22 @@
+$purple: purple;
+
+	a{
+	padding:20px 10px 0 0;
+	color: $purple;
+	&:active{
+	color:blue;
+	
+	}
+	}
+body{
+margin:0;
+background:lightgray;
+
+}
+footer{
+	background:pink;
+}
+header{
+	background:url('./images/galaxy_ban@2x.jpg');
+	height:200px;
+}
