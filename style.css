@@ -1,23 +1,37 @@
 a {
-  padding: 20px 10px 0 0;
-  color: purple;
-}
-a:active {
-  color: blue;
-}
+  color: purple; }
+  a:active {
+    color: blue; }
+
+html {
+  background: #DBDBDB; }
 
 body {
   margin: 0;
-  background: lightgray;
-}
+  background: #F1F1F1; }
 
 footer {
-  background: pink;
-}
+  background: #F1F1F1;
+  font-size: 1.4em; }
 
 header {
   background: url("./images/galaxy_ban@2x.jpg");
   height: 200px;
-}
+  padding: 4.0em 40px; }
+
+.top-nav {
+  background: white;
+  font-size: 1.6em; }
+  .top-nav a {
+    display: inline-block;
+    padding: 20px 10px;
+    text-decoration: none; }
+
+#logo {
+  font-size: 8.5em;
+  text-align: center; }
+  #logo a {
+    color: white;
+    text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */

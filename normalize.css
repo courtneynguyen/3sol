@@ -59,14 +59,10 @@ audio:not([controls]) {
    ========================================================================== */
 
 /**
- * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
- *    `em` units.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
  */
 
 html {
-    font-size: 100%; /* 1 */
+    font-size: 62.5%; /* 1 */
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -125,7 +121,7 @@ a:hover {
 
 h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    /* margin: 0.67em 0; */
 }
 
 h2 {
@@ -292,7 +288,9 @@ dl,
 menu,
 ol,
 ul {
-    margin: 1em 0;
+	margin:0;
+	padding:0;
+    /* margin: 1em 0; */
 }
 
 dd {
@@ -306,7 +304,7 @@ dd {
 menu,
 ol,
 ul {
-    padding: 0 0 0 40px;
+    /* padding: 0 0 0 40px; */
 }
 
 /**

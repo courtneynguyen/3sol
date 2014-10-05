@@ -38,24 +38,41 @@ module.exports = function(grunt) {
     },
     sass: {                              // Task
       dist: {                            // Target
-        options: {                       // Target options
-          style: 'expanded'
-        },
-        files: {                         // Dictionary of files
-          'style.css': 'main.scss',       // 'destination': 'source'
-        }
-      }
-    },
-    watch: {
-	css:{
-		files: '*.scss',
+          src: '*.scss',
+          dest:'style.css',
+	},
+      },
+      css: {
+	src:'*.css',
+	
+      },
+      watch: {
+	sass:{
+		files:['*.scss', '*.php'],
 		tasks: ['sass'],
-		options: {
+		options:{
 		livereload: true
 		}
 	},
-      files: ['<%= jshint.files %>'],
+	css:{
+		files: ['*.css'],
+		options:{
+		livereload: true	
+		},
+//		files: ['*.css', '*.php'],
+//		tasks: ['sass'],
+//		options: {
+//		livereload: true
+//		}
+	},
+      files: ['<%= jshint.files %>', '*.php'],
       tasks: ['jshint']
+    },
+    livereload:{
+	options: {
+		livereload:true
+	},
+	files:['/wp-content/themes/3sol/*.php','/wp-content/themes/3sol/*.css'],
     }
   });
 
@@ -67,6 +84,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['jshint', 'sass', 'uglify']);
 
-  grunt.registerTask('default', ['sass', 'jshint']);
+  grunt.registerTask('default', ['jshint', 'watch']);
 
 };

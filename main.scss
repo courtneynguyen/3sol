@@ -1,22 +1,45 @@
 $purple: purple;
-
-	a{
-	padding:20px 10px 0 0;
+$canvas: #F1F1F1;
+$lowlite:#DBDBDB;
+a{
 	color: $purple;
 	&:active{
 	color:blue;
 	
 	}
-	}
+}
+html{
+	background:$lowlite;	
+}
 body{
 margin:0;
-background:lightgray;
+background:$canvas;
 
 }
 footer{
-	background:pink;
+	background:$canvas;
+	font-size:1.4em;
 }
 header{
 	background:url('./images/galaxy_ban@2x.jpg');
 	height:200px;
+	padding:4.0em 40px;
+}
+.top-nav{
+	background:white;
+	font-size:1.6em;
+	a{
+	display:inline-block;
+	padding:20px 10px;
+	text-decoration:none;
+	}
+}
+#logo{
+	font-size:8.5em;
+	text-align:center;	
+	a{
+	color:white;
+	text-decoration:none;
+	
+	}
 }

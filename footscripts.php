@@ -1,1 +1,1 @@
-<script src="node_modules/livereload/lib/livereload.js"></script>
+<script src="livereload.js"></script>
