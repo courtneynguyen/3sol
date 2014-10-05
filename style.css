@@ -11,8 +11,11 @@ body {
   background: #F1F1F1; }
 
 footer {
-  background: #F1F1F1;
+  background: #352D49;
   font-size: 1.4em; }
+  footer a {
+    color: white;
+    text-decoration: none; }
 
 header {
   background: url("./images/galaxy_ban@2x.jpg");
@@ -26,6 +29,8 @@ header {
     display: inline-block;
     padding: 20px 10px;
     text-decoration: none; }
+  .top-nav li {
+    display: inline-block; }
 
 #logo {
   font-size: 8.5em;
@@ -33,5 +38,9 @@ header {
   #logo a {
     color: white;
     text-decoration: none; }
+
+.menu {
+  width: 800px;
+  margin: 0 auto; }
 
 /*# sourceMappingURL=style.css.map */

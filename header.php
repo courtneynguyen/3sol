@@ -47,12 +47,15 @@
 <div id="main"><!-- this encompasses the entire Web site -->
 	<div id="header">
 		<div id="nav-primary" class="nav top-nav">
-			<nav>
-					<?php if ( is_user_logged_in() ) {
-					     wp_nav_menu( array( 'theme_location' => 'logged-in-menu' ) ); /* if the visitor is logged in, this primary navigation will be displayed */
-					} else {
-					     wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); /* if the visitor is NOT logged in, this primary navigation will be displayed. if a single menu should be displayed for both conditions, set the same menues to be displayed under both conditions through the Wordpress backend */
-					} ?>
+			
+			<?php if  (is_front_page()): ?>
+		<nav class="home-nav">	
+			<?php wp_nav_menu( array( 'theme_location' => 'logged-in-menu' ) ); /* if the visitor is logged in, this primary navigation will be displayed */ ?>
+
+			<?php else: ?>
+			<nav class="page-nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); /* if the visitor is NOT logged in, this primary navigation will be displayed. if a single menu should be displayed for both conditions, set the same menues to be displayed under both conditions through the Wordpress backend */ ?>
+			<?php endif; ?>
 			</nav>
 		</div>
 		<header>

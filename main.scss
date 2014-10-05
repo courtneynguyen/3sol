@@ -1,6 +1,7 @@
 $purple: purple;
 $canvas: #F1F1F1;
 $lowlite:#DBDBDB;
+$footer:#352D49;
 a{
 	color: $purple;
 	&:active{
@@ -17,8 +18,13 @@ background:$canvas;
 
 }
 footer{
-	background:$canvas;
+	background:$footer;
 	font-size:1.4em;
+	a{
+
+		color:white;
+		text-decoration:none;
+	}
 }
 header{
 	background:url('./images/galaxy_ban@2x.jpg');
@@ -33,6 +39,9 @@ header{
 	padding:20px 10px;
 	text-decoration:none;
 	}
+	li{
+		display:inline-block;
+	}
 }
 #logo{
 	font-size:8.5em;
@@ -42,4 +51,8 @@ header{
 	text-decoration:none;
 	
 	}
+}
+.menu{
+	width:800px;
+	margin:0 auto;
 }
