@@ -1,10 +1,15 @@
 a {
-  color: purple; }
+  color: #430080; }
   a:active {
     color: blue; }
 
 html {
-  background: #DBDBDB; }
+  background: #DBDBDB;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  min-height: 200%; }
 
 body {
   margin: 0;
@@ -12,19 +17,25 @@ body {
 
 footer {
   background: #352D49;
-  font-size: 1.4em; }
+  font-size: 1.4em;
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
   footer a {
     color: white;
     text-decoration: none; }
 
 header {
-  background: url("./images/galaxy_ban@2x.jpg");
-  height: 200px;
-  padding: 4.0em 40px; }
+  position: relative;
+  background: url("./images/galaxy_ban@2x.jpg") fixed;
+  padding: 1px; }
 
 .top-nav {
+  position: relative;
   background: white;
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  box-shadow: 1px 1px 20px 3px #4c335f;
+  z-index: 10; }
   .top-nav a {
     display: inline-block;
     padding: 20px 10px;
@@ -42,5 +53,12 @@ header {
 .menu {
   width: 800px;
   margin: 0 auto; }
+
+.container {
+  width: 800px;
+  margin: 0 auto; }
+
+.none {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

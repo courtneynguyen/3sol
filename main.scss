@@ -1,4 +1,4 @@
-$purple: purple;
+$purple: rgb(67, 0, 128);
 $canvas: #F1F1F1;
 $lowlite:#DBDBDB;
 $footer:#352D49;
@@ -11,6 +11,11 @@ a{
 }
 html{
 	background:$lowlite;	
+	position:absolute;
+	top:0;
+	width:100%;
+	min-height:100%;
+	min-height:200%;
 }
 body{
 margin:0;
@@ -20,6 +25,9 @@ background:$canvas;
 footer{
 	background:$footer;
 	font-size:1.4em;
+	position:absolute;
+	bottom:0;
+	width:100%;
 	a{
 
 		color:white;
@@ -27,13 +35,16 @@ footer{
 	}
 }
 header{
-	background:url('./images/galaxy_ban@2x.jpg');
-	height:200px;
-	padding:4.0em 40px;
+	position:relative;
+	background:url('./images/galaxy_ban@2x.jpg') fixed;
+	padding:1px;
 }
 .top-nav{
+	position:relative;
 	background:white;
 	font-size:1.6em;
+	box-shadow:1px 1px 20px 3px rgb(76, 51, 95);
+	z-index:10;
 	a{
 	display:inline-block;
 	padding:20px 10px;
@@ -55,4 +66,12 @@ header{
 .menu{
 	width:800px;
 	margin:0 auto;
+}
+
+.container{
+	width:800px;
+	margin:0 auto;
+}
+.none{
+	display:none;
 }
