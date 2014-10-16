@@ -36,7 +36,8 @@
 	));
 
 	// post thumbnail support
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support('custom-background');
+	//add_theme_support( 'post-thumbnails' );
 	// adds the post thumbnail to the RSS feed
 	function cwc_rss_post_thumbnail($content) {
 	    global $post;
@@ -63,7 +64,8 @@
 	}
 
 	// custom background support
-	add_custom_background();
+	add_theme_support( 'custom-background', null ); 
+	//add_custom_background();
 
 	// custom header image support
 	define('NO_HEADER_TEXT', true );
@@ -79,7 +81,8 @@
 	        }
 	    </style><?php
 	}
-	add_custom_image_header( '', 'admin_header_style' );
+	add_theme_support('custom-background');
+	//add_custom_image_header( '', 'admin_header_style' );
 
 	// adds Post Format support
 	// learn more: http://codex.wordpress.org/Post_Formats

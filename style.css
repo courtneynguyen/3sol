@@ -15,6 +15,9 @@ body {
   margin: 0;
   background: #F1F1F1; }
 
+h1 {
+  font-size: 3.5em; }
+
 footer {
   background: #352D49;
   font-size: 1.4em;
@@ -60,5 +63,35 @@ header {
 
 .none {
   display: none; }
+
+.center-txt {
+  text-align: center; }
+
+.main-content {
+  margin-top: 50px;
+  height: 200px; }
+
+.me-lg {
+  background: url("./images/me@2x.jpg") 80%;
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px; }
+
+#Parallax {
+  background-color: #880088;
+  height: 500px;
+  margin: auto;
+  margin-top: 2em;
+  overflow: hidden;
+  position: relative;
+  width: 750px;
+  -moz-border-radius: 10px;
+  border-radius: 10px; }
+
+#Parallax img {
+  position: absolute;
+  top: 0;
+  left: 0; }
 
 /*# sourceMappingURL=style.css.map */

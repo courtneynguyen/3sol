@@ -39,7 +39,7 @@
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
 <!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/main.css" /> -->
-
+<script src="/wp-content/themes/3sol/parallax.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
