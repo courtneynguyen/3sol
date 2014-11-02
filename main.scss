@@ -2,6 +2,18 @@ $purple: rgb(67, 0, 128);
 $canvas: #F1F1F1;
 $lowlite:#DBDBDB;
 $footer:#352D49;
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?5588459');
+  src: url('../font/fontello.eot?5588459#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?5588459') format('woff'),
+       url('../font/fontello.ttf?5588459') format('truetype'),
+       url('../font/fontello.svg?5588459#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 a{
 	color: $purple;
 	&:active{
@@ -23,16 +35,17 @@ background:$canvas;
 
 }
 h1{
-	font-size:3.5em;
+	font-size:4.2em;
+}
+h3{
+	font-size:1.7em;
 }
 footer{
 	background:$footer;
 	font-size:1.4em;
 	position:absolute;
 	bottom:0;
-	width:100%;
 	a{
-
 		color:white;
 		text-decoration:none;
 	}
@@ -56,6 +69,7 @@ header{
 	li{
 		display:inline-block;
 	}
+	
 }
 #logo{
 	font-size:8.5em;
@@ -84,6 +98,7 @@ header{
 .main-content{
 	margin-top:50px;
 	height:200px;
+	font-size:1.6em;
 }
 .me-lg{
 	background:url('./images/me@2x.jpg') 80%;
@@ -92,6 +107,23 @@ header{
 	width:50px;
 	height:50px;
 
+}
+.con-sm {
+	width: 765px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.no-tp{
+	margin-top:0;
+}
+.no-btm{
+	margin-bottom:0;
+}
+.sm-container{
+	width: 765px;
+}
+.content{
+	margin-top:4.0em;
 }
 #Parallax {
 	background-color: #880088;
