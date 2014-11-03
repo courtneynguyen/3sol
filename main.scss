@@ -1,7 +1,7 @@
 $purple: rgb(67, 0, 128);
 $canvas: #F1F1F1;
 $lowlite:#DBDBDB;
-$footer:#352D49;
+$footer:#1A0E4D;
 
 @font-face {
   font-family: 'fontello';
@@ -13,6 +13,9 @@ $footer:#352D49;
   font-weight: normal;
   font-style: normal;
 }
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900);
 
 a{
 	color: $purple;
@@ -27,12 +30,13 @@ html{
 	top:0;
 	width:100%;
 	min-height:100%;
-	min-height:200%;
 }
 body{
-margin:0;
-background:$canvas;
-
+	margin:0;
+	background:$canvas;
+	font-family:'Open Sans';
+	font-weight:400;
+	margin-bottom:206px;
 }
 h1{
 	font-size:4.2em;
@@ -40,11 +44,18 @@ h1{
 h3{
 	font-size:1.7em;
 }
+h1,h2,h3,h4,h5,h6{
+	font-family:'Roboto';
+	font-weight:900;
+}
 footer{
 	background:$footer;
 	font-size:1.4em;
 	position:absolute;
 	bottom:0;
+	width:100%;
+	padding:30px 0;
+
 	a{
 		color:white;
 		text-decoration:none;
@@ -55,11 +66,42 @@ header{
 	background:url('./images/galaxy_ban@2x.jpg') fixed;
 	padding:1px;
 }
+svg{
+	margin-top: -26px;
+}
+#menu-main-nav{
+	> li{
+		& a{
+			margin-left:22px;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		&:first-child{
+			&:before{
+				content: '';
+				width: 24px;
+				min-height: 20px;
+				height: 100%;
+				background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+				position: absolute;
+			}
+		}
+		&:after{
+			content: '';
+			width: 24px;
+			/* min-height: 20px; */
+			height: 100%;
+			background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+			position: absolute;
+		}
+	}
+}
 .top-nav{
 	position:relative;
 	background:white;
 	font-size:1.6em;
-	box-shadow:1px 1px 20px 3px rgb(76, 51, 95);
+/*	box-shadow:1px 1px 20px 3px rgb(76, 51, 95); */
 	z-index:10;
 	a{
 	display:inline-block;
@@ -96,7 +138,7 @@ header{
 	text-align:center;
 }
 .main-content{
-	margin-top:50px;
+	margin-top:80px;
 	height:200px;
 	font-size:1.6em;
 }
@@ -123,8 +165,27 @@ header{
 	width: 765px;
 }
 .content{
-	margin-top:4.0em;
+	margin-top:10.0em;
+	margin-bottom: 200px;
 }
+.hr{
+	position:relative;
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -.6em;
+		left: 0;
+		height: .1em;
+		width: 100%;
+		background: -webkit-linear-gradient(-45deg, #a72ce0 0%,#541d9b 48%,#541d9b 57%,#20036B 68%,#20036B 100%);
+	}
+}
+.txt-grad{
+	background: url("./images/galaxy_ban@2x.jpg") fixed;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
 #Parallax {
 	background-color: #880088;
 	height: 500px;
@@ -144,3 +205,4 @@ header{
 	top: 0;
 	left: 0;
 }
+		

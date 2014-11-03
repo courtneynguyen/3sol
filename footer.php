@@ -2,7 +2,7 @@
 <!--.container-->
 <div id="footer">
 	<footer>
-		<div class="container">
+		<div class="container sm-container">
 			<?php if ( ! dynamic_sidebar( 'Footer' ) ) : ?><!--Wigitized Footer--><?php endif ?>
 			<div id="nav-footer" class="nav">
 				<nav>
