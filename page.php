@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <header>
-<div class="container">
+<div class="container sm-container">
 	<h1><?php the_title(); ?></h1>			
 </div>
 </header>
-
-<div id="content">
+</div>
+<div id="content" class="container sm-container">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 		<article>
