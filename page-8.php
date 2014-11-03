@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 	<div id="content">
 		<?php if ( ! dynamic_sidebar( 'Alert' ) ) : ?>
 			<!--Wigitized 'Alert' for the home page -->

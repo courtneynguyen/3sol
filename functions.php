@@ -1,4 +1,7 @@
 <?php
+
+
+
 	// enables wigitized sidebars
 	if ( function_exists('register_sidebar') )
 
@@ -151,6 +154,42 @@
 
 	// add_action( 'admin_init', 'theme_options_init' );
 	// add_action( 'admin_menu', 'theme_options_add_page' );
+/*	add_action('init', 'designs_register');
+ 
+function designs_register() {
+ 
+	$labels = array(
+		'name' =&gt; _x('Designs', 'post type general name'),
+		'singular_name' =&gt; _x('Design', 'post type singular name'),
+		'add_new' =&gt; _x('Add New', 'design item'),
+		'add_new_item' =&gt; __('Add New Design Item'),
+		'edit_item' =&gt; __('Edit Design Item'),
+		'new_item' =&gt; __('New Design Item'),
+		'view_item' =&gt; __('View Design Item'),
+		'search_items' =&gt; __('Search Design'),
+		'not_found' =&gt;  __('Nothing found'),
+		'not_found_in_trash' =&gt; __('Nothing found in Trash'),
+		'parent_item_colon' =&gt; ''
+	);
+ 
+	$args = array(
+		'labels' =&gt; $labels,
+		'public' =&gt; true,
+		'publicly_queryable' =&gt; true,
+		'show_ui' =&gt; true,
+		'query_var' =&gt; true,
+		'menu_icon' =&gt; get_stylesheet_directory_uri() . '/article16.png',
+		'rewrite' =&gt; true,
+		'capability_type' =&gt; 'post',
+		'hierarchical' =&gt; false,
+		'menu_position' =&gt; null,
+		'supports' =&gt; array('title','editor','thumbnail'),
+		'description' =&gt; "Quick and easy way to post the steps of designs." 
+	); 
+ 
+	register_post_type( 'design' , $args ); 
+	register_taxonomy("Skills", array("portfolio"), array("hierarchical" =&gt; true, "label" =&gt; "Skills", "singular_label" =&gt; "Skill", "rewrite" =&gt; true)); 
+} */
 	
 	// Init plugin options to white list our options
 	// function theme_options_init(){
