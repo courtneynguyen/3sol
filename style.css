@@ -49,7 +49,8 @@ footer {
 header {
   position: relative;
   background: url("./images/galaxy_ban@2x.jpg") fixed;
-  padding: 1px; }
+  padding: 1px;
+  color: white; }
 
 svg {
   margin-top: -26px; }
@@ -146,7 +147,8 @@ svg {
     left: 0;
     height: .1em;
     width: 100%;
-    background: -webkit-linear-gradient(-45deg, #a72ce0 0%, #541d9b 48%, #541d9b 57%, #20036B 68%, #20036B 100%); }
+    background: -webkit-linear-gradient(-45deg, #a72ce0 0%, #541d9b 48%, #541d9b 57%, #20036B 68%, #20036B 100%);
+    background: -moz-linear-gradient(-45deg, #a72ce0 0%, #541d9b 48%, #541d9b 57%, #20036B 68%, #20036B 100%); }
 
 .txt-grad {
   background: url("./images/galaxy_ban@2x.jpg") fixed;

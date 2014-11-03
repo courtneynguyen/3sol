@@ -38,8 +38,6 @@
 	<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/theme.css" /> -->
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
-<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/main.css" /> -->
-<script src="/wp-content/themes/3sol/parallax.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -58,35 +56,7 @@
 			<?php endif; ?>
 			</nav>
 		</div>
-		<header>
-			<div class="container">
-				<div id="title">
-					<?php if( is_front_page() || is_home() || is_404() ) { ?>
-						<h1 id="logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h1>
-	<!--					<h2 id="tagline"><?php bloginfo('description'); ?></h2>-->
-					<?php } else { ?>
-						<h2 id="logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h2>
-	<!--					<h3 id="tagline"><?php bloginfo('description'); ?></h3> -->
-					<?php } ?>
-				</div>
-				<?php
-					// Check to see if the header image has been removed
-					$header_image = get_header_image();
-					if ( ! empty( $header_image ) ) :
-				?>
-					<?php
-						if ( is_singular() &&
-								has_post_thumbnail( $post->ID ) && 
-								( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
-								$image[1] >= HEADER_IMAGE_WIDTH ) : echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-					else : ?>
-			</div>
-				<?php endif; // end check for featured image or standard header ?>
-				<?php endif; // end check for removed header image ?>
-				
-				<?php if ( ! dynamic_sidebar( 'Header' ) ) : ?><!-- Wigitized Header --><?php endif ?>
-		</header>
-	<div class="none">
+		<div class="none">
 	<p><a href="#content"><?php _e('Skip to Content'); ?></a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
 	</div>	
 	<!-- </div> -->

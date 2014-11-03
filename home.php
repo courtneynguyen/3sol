@@ -1,32 +1,36 @@
+
 <?php get_header(); ?>
-</div>
+	<div id="content">
+		<?php if ( ! dynamic_sidebar( 'Alert' ) ) : ?>
+			<!--Wigitized 'Alert' for the home page -->
+		<?php endif ?>
+	<?php  if (have_posts()) : while (have_posts()) : the_post();  ?> 
+			<div class="post-single">
+				<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+				<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+*/  echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
+				<div class="post-content">
+					<?php the_content(__('Read more'));?>
+				</div>
+				<div class="post-meta">
+					<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time(); _e(', by '); the_author_posts_link(); ?></p>
+					<p><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?>
+					<p><?php _e('Categories: '); the_category(', ') ?></p>
+					<p><?php if (the_tags('Tags: ', ', ', ' ')); ?></p>
+				</div><!--.postMeta-->
+			</div><!--.post-single-->
+		<?php endwhile; else: ?>
+			<div class="no-results">
+				<p><strong><?php _e('There has been an error.'); ?></strong></p>
+				<p><?php _e('We apologize for any inconvenience, please hit back on your browser or use the search form below.'); ?></p>
+				<?php get_search_form(); /* outputs the default Wordpress search form */  ?>
+			</div><!--noResults-->
+		<?php endif; ?> 
+			
+		<div class="oldernewer">
+			<p class="older"><?php next_posts_link('&laquo; Older Entries') ?></p>
+			<p class="newer"><?php previous_posts_link('Newer Entries &raquo;') ?></p>
+		</div><!--.oldernewer-->
 
-<div id="content" class="container sm-container content">
-	<h3 class="no-btm no-tp">I am a lion tamer (with shoelace), but </h3>
-
-
-
-	<svg width="100%" height="100%" viewBox="0 0 706 100" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
-	<defs>
-	<pattern id="img1" patternUnits="userSpaceOnUse" width="385" height="700">
-	<image xlink:href="wp-content/themes/3sol/images/galaxy_ban@2x.jpg" x="-160" y="-160" width="1000" height="470"></image>
-	</pattern>
-	<!--        <pattern id="textPattern" x="7" y="7" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-	<rect x="5" y="5" width="5" height="5" fill= "#876fc1" />
-	</pattern> -->
-	</defs>
-	<text x="0" y="60%" font-size="42" font-family="Roboto" font-weight="900" fill="url(#img1)">my passion is to code, quest, and cat.</text>
-	</svg>
-	<!-- <h1 class="no-tp hr txt-grad">my passion is to code, quest, and cat.</h1> -->
-	<div class="main-content">
-		<h4 class="hr">What do I do for a living?</h4> 
-		<p class="">In a nutshell, I play in a digital sandbox every day. I invent interfaces the imagination only dreams of. I am a web engineer. What is my job? I tinker, create, design, refine, repeat. I wish to create beautiful user experiences that are transparent, friendly, and usable for the world.</p>
-		<!--<div id="Parallax">
-
-			<img src="/wp-content/themes/3sol/images/Bottom.png"/>
-			<img src="/wp-content/themes/3sol/images/Top.png"/>
-		</div> -->
 	</div>
-</div>
 
 <?php get_footer(); ?>
