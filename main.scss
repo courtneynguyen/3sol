@@ -30,7 +30,7 @@ html{
 	top:0;
 	width:100%;
 	min-height:100%;
-	&:after{
+/*  &:after{
 		content: 'Under Construction, please check back later! Thanks!';
 		position: absolute;
 		top: 0;
@@ -42,7 +42,7 @@ html{
 		margin: 0 auto;
 		z-index: 20;
 		font-weight: 900;
-	}
+	} */
 }
 body{
 	margin:0;
@@ -53,6 +53,9 @@ body{
 }
 h1{
 	font-size:4.2em;
+}
+h2{
+	font-size:3.1em;
 }
 h3{
 	font-size:1.7em;

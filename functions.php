@@ -1,7 +1,5 @@
 <?php
 
-
-
 	// enables wigitized sidebars
 	if ( function_exists('register_sidebar') )
 
@@ -152,9 +150,43 @@
 	}
 	add_filter('post_class', 'has_thumb_class');
 
+/*add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 200, 200, true ); // Normal post thumbnails
+add_image_size( 'single-post-thumbnail', 400, 9999 ); // Permalink thumbnail size
+
+add_theme_support( 'post-thumbnails', array( 'post','custom-post-type-here','another-custom-post-type' ) ); */
+add_theme_support( 'post-thumbnails' ); 
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type( 'designs',
+    array(
+      'labels' => array(
+        'name' => __( 'Designs' ),
+        'singular_name' => __( 'Design' )
+      ),
+      'public' => true,
+			'has_archive' => true,
+			'supports' => array('thumbnail', 'title', 'editor')
+		//	'has_thumbnail' =>
+    )
+	);
+
+	 register_post_type( 'sol_projects',
+    array(
+      'labels' => array(
+        'name' => __( 'Projects' ),
+        'singular_name' => __( 'Project' )
+      ),
+      'public' => true,
+			'has_archive' => true,
+			'supports' => array('thumbnail', 'title', 'editor')
+		//	'has_thumbnail' =>
+    )
+  );
+}
 	// add_action( 'admin_init', 'theme_options_init' );
 	// add_action( 'admin_menu', 'theme_options_add_page' );
-/*	add_action('init', 'designs_register');
+	/*add_action('init', 'designs_register');
  
 function designs_register() {
  
@@ -188,8 +220,10 @@ function designs_register() {
 	); 
  
 	register_post_type( 'design' , $args ); 
-	register_taxonomy("Skills", array("portfolio"), array("hierarchical" =&gt; true, "label" =&gt; "Skills", "singular_label" =&gt; "Skill", "rewrite" =&gt; true)); 
-} */
+}*/
+/*
+	register_taxonomy("Skills", array("portfolio"), array("hierarchical" =&gt; true, "label" =&gt; "Skills", "singular_label" =&gt; "Skill", "rewrite" =&gt; true)); */
+ 
 	
 	// Init plugin options to white list our options
 	// function theme_options_init(){
