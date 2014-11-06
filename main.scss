@@ -159,6 +159,10 @@ svg{
 	height:200px;
 	font-size:1.6em;
 }
+.content-sm{
+padding: 3.0em 0px;
+font-size: 1.6em;
+}
 .me-lg{
 	background:url('./images/me@2x.jpg') 80%;
 	margin:0 auto;
@@ -224,4 +228,24 @@ svg{
 	top: 0;
 	left: 0;
 }
-		
+.designs img{
+	max-width:100% !important;
+}
+.index-thumbnail {
+width: 200px;
+height: 200px;
+display: block;
+background-size: 111%;
+background-position: 5% 1%;
+}	
+.designs{
+	article{
+		display:inline-block;
+		margin:0 5% 0 0;
+
+	}
+}
+a[title="Cook It!"] {
+background-size: 247%;
+background-position: 24% 10%;
+}
