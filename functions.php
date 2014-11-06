@@ -171,7 +171,7 @@ function create_post_type() {
     )
 	);
 
-	 register_post_type( 'sol_projects',
+	 register_post_type( 'projects',
     array(
       'labels' => array(
         'name' => __( 'Projects' ),
@@ -182,7 +182,20 @@ function create_post_type() {
 			'supports' => array('thumbnail', 'title', 'editor')
 		//	'has_thumbnail' =>
     )
+	);
+	 register_post_type( 'websites',
+    array(
+      'labels' => array(
+        'name' => __( 'Websites'),
+        'singular_name' => __( 'Website' )
+      ),
+      'public' => true,
+			'has_archive' => true,
+			'supports' => array('thumbnail', 'title', 'editor')
+		//	'has_thumbnail' =>
+    )
   );
+
 }
 	// add_action( 'admin_init', 'theme_options_init' );
 	// add_action( 'admin_menu', 'theme_options_add_page' );
