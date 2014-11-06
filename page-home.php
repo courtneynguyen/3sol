@@ -30,7 +30,7 @@
 </div>
 
 <div id="content" class="container sm-container content">
-	<h3 class="no-btm no-tp">I am a lion tamer (with shoelace), but </h3>
+	<h3 class="no-btm no-tp add-txt">I am a lion tamer (with shoelace), but </h3>
 
 
 

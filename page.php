@@ -2,7 +2,7 @@
 
 <header>
 <div class="container sm-container">
-	<h1><?php the_title(); ?></h1>			
+	<h1 class="center-ltr"><?php the_title(); ?></h1>			
 </div>
 </header>
 

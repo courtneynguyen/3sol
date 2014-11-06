@@ -25,7 +25,7 @@ a{
 	}
 }
 html{
-	background:$lowlite;	
+	background:$canvas;	
 	position:absolute;
 	top:0;
 	width:100%;
@@ -130,24 +130,6 @@ svg{
 	}
 	
 }
-#logo{
-	font-size:8.5em;
-	text-align:center;	
-	a{
-		color: rgba(255,255,255,.85);
-		text-decoration:none;
-	
-	}
-}
-.menu{
-	width:800px;
-	margin:0 auto;
-}
-
-.container{
-	width:800px;
-	margin:0 auto;
-}
 .none{
 	display:none;
 }
@@ -156,7 +138,6 @@ svg{
 }
 .main-content{
 	margin-top:80px;
-	height:200px;
 	font-size:1.6em;
 }
 .content-sm{
@@ -183,7 +164,141 @@ font-size: 1.6em;
 	margin-bottom:0;
 }
 .sm-container{
+	width: 305px;
+}
+.container{
+	width:305px;
+	margin:0 auto;
+}
+#menu-main-nav{
+	> li{
+		& a{
+			margin-left:0px;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		&:first-child{
+			&:before{
+				content: '';
+				width: auto;
+				min-height: 20px;
+				height: 100%;
+				background:none;
+				position: absolute;
+			}
+		}
+		&:after{
+			content: '';
+			width: auto;
+			/* min-height: 20px; */
+			height: 100%;
+			background:none;
+			position: absolute;
+		}
+	}
+}
+.menu{
+	width:305px;
+	margin:0 auto;
+}
+svg{
+				display:none;
+}.add-txt{
+	&:after{
+		content:'my passion is to code, quest, and cat.';
+
+	}
+}
+#logo{
+font-size:5.5em;
+text-align:center;	
+	a{
+		color: rgba(255,255,255,.85);
+		text-decoration:none;
+	
+	}
+}
+.designs{
+	article{
+		display:block;
+		margin:0 auto;
+		text-align:center;
+		a{
+			margin:0 auto;
+		}
+
+	}
+	img{
+		max-width:100% !important;
+	}
+}
+.center-ltr{
+	text-align:center;
+}
+@media(min-width:768px){
+.center-ltr{
+	text-align:left;
+}
+.designs{
+	article{
+		display:inline-block;
+		margin:0 5% 0 0;
+		text-align:left;
+	}
+}
+#logo{
+	font-size:8.5em;
+}
+
+.add-txt{
+	&:after{
+		content:'';
+
+	}
+}
+svg{
+	display:block;
+}
+.menu{
+	width:800px;
+	margin:0 auto;
+}
+#menu-main-nav{
+	> li{
+		& a{
+			margin-left:22px;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		&:first-child{
+			&:before{
+				content: '';
+				width: 24px;
+				min-height: 20px;
+				height: 100%;
+				background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+				position: absolute;
+			}
+		}
+		&:after{
+			content: '';
+			width: 24px;
+			/* min-height: 20px; */
+			height: 100%;
+			background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+			position: absolute;
+		}
+	}
+}
+.sm-container{
 	width: 765px;
+}
+.container{
+	width:800px;
+	margin:0 auto;
+}
 }
 .content{
 	margin-top:10.0em;
@@ -228,9 +343,6 @@ font-size: 1.6em;
 	top: 0;
 	left: 0;
 }
-.designs img{
-	max-width:100% !important;
-}
 .index-thumbnail {
 width: 200px;
 height: 200px;
@@ -238,13 +350,7 @@ display: block;
 background-size: 111%;
 background-position: 5% 1%;
 }	
-.designs{
-	article{
-		display:inline-block;
-		margin:0 5% 0 0;
 
-	}
-}
 a[title="Cook It!"] {
 background-size: 247%;
 background-position: 24% 10%;
@@ -257,7 +363,10 @@ a[title="TOS"]{
 background-size: 268%;
 background-position: 49% 56%;
 }
+.cook-it-logo {
+max-height: 30px;
 
+}
 
 
 

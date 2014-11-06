@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <header>
 <div class="container sm-container">
-	<h1>Designs</h1>			
+	<h1 class="center-ltr">Designs</h1>			
 </div>
 </header>
 <div id="content" class="container sm-container content-sm designs">
