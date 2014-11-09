@@ -36,7 +36,7 @@ body {
   background: #F1F1F1;
   font-family: 'Open Sans';
   font-weight: 400;
-  margin-bottom: 206px; }
+  margin-bottom: 300px; }
 
 h1 {
   font-size: 4.2em; }
@@ -53,6 +53,7 @@ h1, h2, h3, h4, h5, h6 {
 
 footer {
   background: #1A0E4D;
+  color: #666666;
   font-size: 1.4em;
   position: absolute;
   bottom: 0;
@@ -191,6 +192,9 @@ svg {
   text-align: center; }
 
 @media (min-width: 768px) {
+  body {
+    margin-bottom: 206px; }
+
   .center-ltr {
     text-align: left; }
 
