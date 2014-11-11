@@ -11,6 +11,7 @@ $url = $thumb['0']; ?>
 
 
 			<article>
+<h5><?php the_title(); ?></h5>
 							<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark" <?php echo "style=\"background-image:url('$url');\"" ?> class="index-thumbnail <?php echo $the_post->ID+'' ?>">
 <?php /*the_title(); */ ?>
 		<?php /*if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ /*echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } */ ?>

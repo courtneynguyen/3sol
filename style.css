@@ -65,7 +65,7 @@ footer {
 
 header {
   position: relative;
-  background: url("./images/galaxy_ban@2x.jpg") fixed;
+  background: url("./images/galaxy_ban@2x.jpg");
   padding: 1px;
   color: white; }
 
@@ -195,12 +195,15 @@ svg {
   body {
     margin-bottom: 206px; }
 
+  header {
+    background: url("./images/galaxy_ban@2x.jpg") fixed; }
+
   .center-ltr {
     text-align: left; }
 
   .designs article {
     display: inline-block;
-    margin: 0 5% 0 0;
+    margin: 0 5% 10%  0;
     text-align: left; }
 
   #logo {
