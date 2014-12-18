@@ -2,6 +2,7 @@ $purple: rgb(67, 0, 128);
 $canvas: #F1F1F1;
 $lowlite:#DBDBDB;
 $footer:#1A0E4D;
+$body-colr:rgb(94, 88, 116);
 
 @font-face {
   font-family: 'fontello';
@@ -49,6 +50,7 @@ body{
 	background:$canvas;
 	font-family:'Open Sans';
 	font-weight:400;
+	color:$body-colr;
 	margin-bottom:300px;
 }
 h1{
@@ -59,6 +61,9 @@ h2{
 }
 h3{
 	font-size:1.7em;
+}
+h5{
+	font-size:20px;
 }
 h1,h2,h3,h4,h5,h6{
 	font-family:'Roboto';
@@ -223,10 +228,13 @@ text-align:center;
 .designs{
 	article{
 		display:block;
-		margin:0 auto;
+		margin: 0 5% 5% 0;
 		text-align:center;
 		a{
 			margin:0 auto;
+		}
+		&:nth-child(3n+3){
+			margin-right:0;
 		}
 
 	}
@@ -250,7 +258,7 @@ background:url('./images/galaxy_ban@2x.jpg') fixed;
 .designs{
 	article{
 		display:inline-block;
-		margin:0 5% 10%  0;
+		margin: 0 11% 1% 0;
 		text-align:left;
 	}
 }
