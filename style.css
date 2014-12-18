@@ -17,6 +17,7 @@ html {
   top: 0;
   width: 100%;
   min-height: 100%;
+  overflow-y: scroll;
   /*  &:after{
   		content: 'Under Construction, please check back later! Thanks!';
   		position: absolute;
