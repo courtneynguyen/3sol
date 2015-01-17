@@ -36,6 +36,14 @@
 		'after_title' => '</h4>',
 	));
 
+	$args = array(
+	'search-form',
+	'comment-form',
+	'comment-list',
+	'gallery',
+	'caption'
+);
+	add_theme_support( 'html5', $args );
 	// post thumbnail support
 	add_theme_support('custom-background');
 	//add_theme_support( 'post-thumbnails' );

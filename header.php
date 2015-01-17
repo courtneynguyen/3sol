@@ -30,33 +30,55 @@
 	<?php /* The HTML5 Shim is required for older browsers, mainly older versions IE */ ?>
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<?php wp_head(); ?> <?php /* this is used by many Wordpress features and for plugins to work proporly */ ?>
-	<?php /* Remove the Less Framework CSS line to not include the CSS Reset, basic styles/positioning, and Less Framework itself */?>
-<!--	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/style.css" />-->
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/normalize.css" />
-	<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/theme.css" /> -->
-	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+		<![endif]-->
+		<?php wp_head(); ?> <?php /* this is used by many Wordpress features and for plugins to work proporly */ ?>
+		<?php /* Remove the Less Framework CSS line to not include the CSS Reset, basic styles/positioning, and Less Framework itself */?>
+		<!--	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/style.css" />-->
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/normalize.css" />
+		<!-- <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'template_url' ); ?>/theme.css" /> -->
+		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 
-</head>
+	</head>
 
-<body <?php body_class(); ?>>
-<!-- maybe  -->
-<div id="main"><!-- this encompasses the entire Web site -->
-	<div id="header">
-		<div id="nav-primary" class="nav top-nav">
-			
+	<body <?php body_class(); ?>>
+	<div class="page-wrapper">
+		<header id="nav-primary">
+			<nav class="span8 middle">
+				<div class="logo span4">
+					<?php if( is_front_page() || is_home() || is_404() ) { ?>
+					<h2><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h2>
+					<h5 id="tagline"><?php bloginfo('description'); ?></h5>
+					<?php } else { ?>
+					<h2 id="logo"><a href="<?php bloginfo('url'); ?>/" title="<?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a></h2>
+										<h3 id="tagline"><?php bloginfo('description'); ?></h3> 
+					<?php } ?>
+				</div>
 			<?php if  (is_front_page()): ?>
-		<nav class="home-nav">	
-			<?php wp_nav_menu( array( 'theme_location' => 'logged-in-menu' ) ); /* if the visitor is logged in, this primary navigation will be displayed */ ?>
-
-			<?php else: ?>
-			<nav class="page-nav">
-			<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); /* if the visitor is NOT logged in, this primary navigation will be displayed. if a single menu should be displayed for both conditions, set the same menues to be displayed under both conditions through the Wordpress backend */ ?>
-			<?php endif; ?>
+			<nav class="horizontal-nav span8">	
+				<?php wp_nav_menu( array( 'theme_location' => 'logged-in-menu' ) ); /* if the visitor is logged in, this primary navigation will be displayed */ ?>
+				<?php else: ?>
+				<nav class="page-nav">
+					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); /* if the visitor is NOT logged in, this primary navigation will be displayed. if a single menu should be displayed for both conditions, set the same menues to be displayed under both conditions through the Wordpress backend */ ?>
+				</nav>
 			</nav>
-		</div>
-		<div class="none">
-	<p><a href="#content"><?php _e('Skip to Content'); ?></a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
-	</div>	
-	<!-- </div> -->
+			<?php endif; ?>	
+			</nav>
+			<div class="none">
+				<p><a href="#content"><?php _e('Skip to Content'); ?></a></p><?php /* used for accessibility, particularly for screen reader applications */ ?>
+			</div>	
+<?php
+					// Check to see if the header image has been removed
+$header_image = get_header_image();
+if ( ! empty( $header_image ) ) :
+	?>
+<?php
+if ( is_singular() &&
+	has_post_thumbnail( $post->ID ) && 
+	( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
+	$image[1] >= HEADER_IMAGE_WIDTH ) : echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+	else : ?>
+<?php endif; // end check for featured image or standard header ?>
+<?php endif; // end check for removed header image ?>
+
+<?php if ( ! dynamic_sidebar( 'Header' ) ) : ?><!-- Wigitized Header --><?php endif ?>
+	</header>

@@ -1,0 +1,508 @@
+$purple: rgb(67, 0, 128);
+$canvas: #F1F1F1;
+$lowlite:#DBDBDB;
+$footer:#1A0E4D;
+$body-colr:rgb(94, 88, 116);
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?5588459');
+  src: url('../font/fontello.eot?5588459#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?5588459') format('woff'),
+       url('../font/fontello.ttf?5588459') format('truetype'),
+       url('../font/fontello.svg?5588459#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900);
+
+a{
+	color: $purple;
+	&:active{
+	color:blue;
+	
+	}
+}
+html{
+	background:$canvas;	
+	position:absolute;
+	top:0;
+	width:100%;
+	min-height:100%;
+	overflow-y: scroll;
+/*  &:after{
+		content: 'Under Construction, please check back later! Thanks!';
+		position: absolute;
+		top: 0;
+		background: rgba(211, 120, 189, .9);
+		width: 100%;
+		padding: 30px 0px;
+		font-size: 2.8em;
+		text-align: center;
+		margin: 0 auto;
+		z-index: 20;
+		font-weight: 900;
+	} */
+}
+body{
+	margin:0;
+	background:$canvas;
+	font-family:'Open Sans';
+	font-weight:400;
+	color:$body-colr;
+	margin-bottom:300px;
+}
+h1{
+	font-size:4.2em;
+}
+h2{
+	font-size:3.1em;
+}
+h3{
+	font-size:1.7em;
+}
+h5{
+	font-size:20px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family:'Roboto';
+	font-weight:900;
+}
+footer{
+	background:$footer;
+	color:rgb(102, 102, 102);
+	font-size:1.4em;
+	position:absolute;
+	bottom:0;
+	width:100%;
+	padding:30px 0;
+
+	a{
+		color:white;
+		text-decoration:none;
+	}
+}
+/*header{*/
+/*	position:relative;
+	background:url('./images/galaxy_ban@2x.jpg');
+	padding:1px;
+	color:white;*/
+/*}*/
+.galaxy{
+	position:relative;
+	background:url('./images/galaxy_ban@2x.jpg');
+	padding:1px;
+	color:white;
+	
+}
+svg{
+	margin-top: -26px;
+}
+#menu-main-nav{
+	> li{
+		& a{
+			margin-left:22px;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		&:first-child{
+			&:before{
+				content: '';
+				width: 24px;
+				min-height: 20px;
+				height: 100%;
+				background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+				position: absolute;
+			}
+		}
+		&:after{
+			content: '';
+			width: 24px;
+			/* min-height: 20px; */
+			height: 100%;
+			background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+			position: absolute;
+		}
+	}
+}
+.top-nav{
+	position:relative;
+	background:white;
+	font-size:1.6em;
+/*	box-shadow:1px 1px 20px 3px rgb(76, 51, 95); */
+	z-index:10;
+	a{
+	display:inline-block;
+	padding:20px 10px;
+	text-decoration:none;
+	}
+	li{
+		display:inline-block;
+	}
+	
+}
+.none{
+	display:none;
+}
+.center-txt{
+	text-align:center;
+}
+.main-content{
+	font-size:1.6em;
+}
+.content-sm{
+padding: 3.0em 0px;
+font-size: 1.6em;
+}
+.me-lg{
+	background:url('./images/me@2x.jpg') 80%;
+	margin:0 auto;
+	border-radius:50px;
+	width:50px;
+	height:50px;
+
+}
+.con-sm {
+	width: 765px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.no-tp{
+	margin-top:0;
+}
+.no-btm{
+	margin-bottom:0;
+}
+.sm-container{
+	width: 305px;
+}
+.container{
+	width:305px;
+	margin:0 auto;
+}
+#menu-main-nav{
+	> li{
+		& a{
+			margin-left:0px;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		&:first-child{
+			&:before{
+				content: '';
+				width: auto;
+				min-height: 20px;
+				height: 100%;
+				background:none;
+				position: absolute;
+			}
+		}
+		&:after{
+			content: '';
+			width: auto;
+			/* min-height: 20px; */
+			height: 100%;
+			background:none;
+			position: absolute;
+		}
+	}
+}
+.menu{
+	width:305px;
+	margin:0 auto;
+}
+svg{
+				display:none;
+}.add-txt{
+	&:after{
+		content:'my passion is to code, quest, and cat.';
+
+	}
+}
+#logo{
+font-size:5.5em;
+text-align:center;	
+	a{
+		color: rgba(255,255,255,.85);
+		text-decoration:none;
+	
+	}
+}
+.designs{
+	article{
+		display:block;
+		margin: 0 5% 5% 0;
+		text-align:center;
+		a{
+			margin:0 auto;
+		}
+		&:nth-child(3n+3){
+			margin-right:0;
+		}
+
+	}
+	img{
+		max-width:100% !important;
+	}
+}
+.center-ltr{
+	text-align:center;
+}
+@media(min-width:768px){
+body{
+margin-bottom:206px;
+}
+header{
+background:url('./images/galaxy_ban@2x.jpg') fixed;
+}
+.center-ltr{
+	text-align:left;
+}
+.designs{
+	article{
+		display:inline-block;
+		margin: 0 11% 1% 0;
+		text-align:left;
+	}
+}
+#logo{
+	font-size:8.5em;
+}
+
+.add-txt{
+	&:after{
+		content:'';
+
+	}
+}
+svg{
+	display:block;
+}
+.menu{
+	width:800px;
+	margin:0 auto;
+}
+#menu-main-nav{
+	> li{
+		& a{
+			margin-left:22px;
+			&:hover{
+				text-decoration:underline;
+			}
+		}
+		&:first-child{
+			&:before{
+				content: '';
+				width: 24px;
+				min-height: 20px;
+				height: 100%;
+				background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+				position: absolute;
+			}
+		}
+		&:after{
+			content: '';
+			width: 24px;
+			/* min-height: 20px; */
+			height: 100%;
+			background: url("./images/galaxy_ban@2x.jpg") fixed 0 0;
+			position: absolute;
+		}
+	}
+}
+.sm-container{
+	width: 765px;
+}
+.container{
+	width:800px;
+	margin:0 auto;
+}
+}
+.content{
+	margin-top:10.0em;
+	margin-bottom: 200px;
+}
+.hr{
+	position:relative;
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: -.6em;
+		left: 0;
+		height: .1em;
+		width: 100%;
+		background: -webkit-linear-gradient(-45deg, #a72ce0 0%,#541d9b 48%,#541d9b 57%,#20036B 68%,#20036B 100%);
+		background: -moz-linear-gradient(-45deg, #a72ce0 0%,#541d9b 48%,#541d9b 57%,#20036B 68%,#20036B 100%);
+
+	}
+}
+.txt-grad{
+	background: url("./images/galaxy_ban@2x.jpg") fixed;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#Parallax {
+	background-color: #880088;
+	height: 500px;
+	margin: auto;
+	margin-top: 2em;
+	overflow: hidden;
+	position: relative;
+	width: 750px;
+
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	
+}
+
+#Parallax img {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.index-thumbnail {
+width: 200px;
+height: 200px;
+display: block;
+background-size: 111%;
+background-position: 5% 1%;
+}	
+
+a[title="Cook It!"] {
+background-size: 247%;
+background-position: 24% 10%;
+}
+a[title="bowld"]{
+background-size: 153%;
+background-position: 48% 1%;
+}
+a[title="TOS"]{
+background-size: 268%;
+background-position: 49% 56%;
+}
+.cook-it-logo {
+max-height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************************** **********************************/
+#wrapper{
+	position:relative;
+	margin: 0 auto;
+
+}
+
+#game{
+	background:url('images/kitty_bg.jpg');
+	display:block;
+	position:absolute;
+	z-index:1;
+	/*background-size: cover;*/
+}
+
+#start,#game-over,#pause{
+	background: none repeat scroll 0% 0% rgba(255,255,255, 0.8);
+	position: absolute;
+	z-index:2;
+	color:black;
+}
+
+#start{
+	color:black;
+
+
+}
+
+#start p, #start ol{
+	padding: 10px 40px;
+}
+
+#game-over{
+	visibility:hidden;
+}
+
+#pause{
+	visibility: hidden;
+}
+
+.butt{
+
+	padding: 11px 23px;
+	text-decoration: none;
+	color: black;
+
+	font-size: 16px;
+}
+
+.butt-good{
+	background: rgb(86, 209, 204);
+	border: 1px solid rgb(4, 180, 173);
+}
+
+.butt-exit{
+	background: rgb(238, 117, 117);
+	border: 1px solid rgb(187, 58, 58);
+}
+
+.invisible{
+	visibility: hidden !important;
+}
+
+.visible{
+	visibility: visible !important;
+}
+.wrapper-hr{
+	padding: 50px 76px 0px 90px;
+}
+.wrapper-xs{
+	padding: 0 190px;
+}
+.rt-butt{
+	right: 130px;
+	position: absolute;
+}
+.lt-butt{
+	position: absolute;
+	left: 130px;
+}
+.txt-center{
+	text-align: center;
+}
+.center-blk {
+	margin: 0 auto;
+	display: block;
+}
+.wd-100{
+	width:100px;
+}
+p{
+	font-size:16px;
+}
+.float-lt{
+	float:left;
+}
+.float-rt{
+	float:right;
+}

@@ -15,7 +15,7 @@
 </div>
 <div id="content" class="container sm-container">
 <div id="wrapper">
-
+<?php the_content(); ?>
 		<div id="start">
 			<h1 class="txt-center">Kitty Jump!</h1>
 			<div class="">

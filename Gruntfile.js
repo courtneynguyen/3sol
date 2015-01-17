@@ -40,7 +40,7 @@ module.exports = function(grunt) {
       dist: {                            // Target
           src: '*.scss',
           dest:'style.css',
-	},
+	     },
       },
       css: {
 	src:'*.css',
@@ -84,6 +84,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['jshint', 'sass', 'uglify']);
 
-  grunt.registerTask('default', ['jshint', 'watch']);
+  grunt.registerTask('default', ['jshint', 'watch', 'uglify']);
+  grunt.registerTask('build', ['uglify']);
 
 };
