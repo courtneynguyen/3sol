@@ -57,7 +57,7 @@
 			<nav class="horizontal-nav span8">	
 				<?php wp_nav_menu( array( 'theme_location' => 'logged-in-menu' ) ); /* if the visitor is logged in, this primary navigation will be displayed */ ?>
 				<?php else: ?>
-				<nav class="page-nav">
+				<nav class="horizontal-nav span8">
 					<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); /* if the visitor is NOT logged in, this primary navigation will be displayed. if a single menu should be displayed for both conditions, set the same menues to be displayed under both conditions through the Wordpress backend */ ?>
 				</nav>
 			</nav>

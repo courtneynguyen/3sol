@@ -1,12 +1,12 @@
 
 <?php get_header(); ?>
-<header>
+
+<div id="content" class="span8 middle">
+	<header>
 <div class="container sm-container">
 	<h1 class="center-ltr" >Designs</h1>			
 </div>
 </header>
-</div>
-<div id="content" class="container sm-container">
 <h2><?php the_title(); ?> </h2>
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>

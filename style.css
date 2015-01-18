@@ -74,7 +74,7 @@ html {
   position: relative; }
 
 body {
-  margin: 0 0 40px;
+  margin: 0 0 100px;
   background: #d1d1d1; }
 
 footer {
@@ -82,8 +82,11 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 40px;
-  background: #929292; }
+  height: 100px;
+  background-color: black;
+  background-image: url("./images/broken-noise.png");
+  color: white;
+  font-size: 1.3em; }
 
 a {
   text-decoration: none; }
@@ -181,6 +184,9 @@ h6 {
 
 /*******************************************************/
 /** CUSTOM SHIT **/
+.wrapper {
+  display: inline-block; }
+
 .page-wrapper {
   min-height: 100%; }
 
@@ -218,6 +224,23 @@ h6 {
 a.ghost-btn:hover {
   border-color: #8222DA;
   color: #8222DA; }
+
+.designs > article {
+  background: white;
+  width: 400px;
+  height: 250px;
+  float: left;
+  margin: 0 11px 43px;
+  text-align: center;
+  box-shadow: 0px 0px 5px 0px #a5a5a5; }
+  .designs > article .index-thumbnail {
+    width: 100%;
+    height: 137px;
+    display: block;
+    background-size: 102%;
+    text-align: center; }
+  .designs > article:nth-of-type(3n+1) {
+    margin-left: 0; }
 
 /*******************************************************/
 
