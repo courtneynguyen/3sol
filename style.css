@@ -111,7 +111,8 @@ h6 {
   font-size: 1.6rem; }
 
 img {
-  max-width: 100%; }
+  max-width: 100%;
+  height: auto; }
 
 /*******************************************************/
 /** REUSABLE COMPS **/
@@ -255,6 +256,95 @@ a.ghost-btn:hover {
     width: 100%;
     height: auto;
     display: block; }
+
+/*******************************************************/
+/** HOME PAGE **/
+.home.page {
+  background: white; }
+
+/*******************************************************/
+/** KITTY JUMP **/
+#wrapper {
+  position: relative;
+  margin: 0 auto; }
+
+#game {
+  background: url("images/kitty_bg.jpg");
+  display: block;
+  position: absolute;
+  z-index: 1;
+  /*background-size: cover;*/ }
+
+#start, #game-over, #pause {
+  background: none repeat scroll 0% 0% rgba(255, 255, 255, 0.8);
+  position: absolute;
+  z-index: 2;
+  color: black; }
+
+#start {
+  color: black; }
+
+#start p, #start ol {
+  padding: 10px 40px; }
+
+#game-over {
+  visibility: hidden; }
+
+#pause {
+  visibility: hidden; }
+
+.butt {
+  padding: 11px 23px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px; }
+
+.butt-good {
+  background: #56d1cc;
+  border: 1px solid #04b4ad; }
+
+.butt-exit {
+  background: #ee7575;
+  border: 1px solid #bb3a3a; }
+
+.invisible {
+  visibility: hidden !important; }
+
+.visible {
+  visibility: visible !important; }
+
+.wrapper-hr {
+  padding: 50px 76px 0px 90px; }
+
+.wrapper-xs {
+  padding: 0 190px; }
+
+.rt-butt {
+  right: 130px;
+  position: absolute; }
+
+.lt-butt {
+  position: absolute;
+  left: 130px; }
+
+.txt-center {
+  text-align: center; }
+
+.center-blk {
+  margin: 0 auto;
+  display: block; }
+
+.wd-100 {
+  width: 100px; }
+
+p {
+  font-size: 16px; }
+
+.float-lt {
+  float: left; }
+
+.float-rt {
+  float: right; }
 
 /*******************************************************/
 
