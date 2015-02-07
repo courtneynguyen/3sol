@@ -71,7 +71,8 @@
 html {
   font-size: 62.5%;
   min-height: 100%;
-  position: relative; }
+  position: relative;
+  overflow-y: scroll; }
 
 body {
   margin: 0 0 100px;
@@ -108,6 +109,9 @@ h5 {
 
 h6 {
   font-size: 1.6rem; }
+
+img {
+  max-width: 100%; }
 
 /*******************************************************/
 /** REUSABLE COMPS **/
@@ -241,6 +245,16 @@ a.ghost-btn:hover {
     text-align: center; }
   .designs > article:nth-of-type(3n+1) {
     margin-left: 0; }
+.designs.type-designs {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center; }
+  .designs.type-designs > article {
+    width: 100%;
+    height: auto;
+    display: block; }
 
 /*******************************************************/
 

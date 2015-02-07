@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="content">
+<div id="content" class="span8 middle">
 
 	<h1>
 		<?php if ( is_day() ) : /* if the daily archive is loaded */ ?>

@@ -1,23 +1,22 @@
 <?php get_header(); ?>
-<div id="content" class="span8 middle projects">
+<div id="content" class="span8 middle projects designs">
 	<header>
 		<h1 class="center-ltr" >Projects</h1>			
 	</header>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-	<div class="post-single">
+	<article class="post-single">
 		<h2><a href="<?php the_permalink() ?>" title="<?php the_title(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 		<?php if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } ?>
 		<p><?php _e('Written on '); the_time('F j, Y'); _e(' at '); the_time(); _e(', by '); the_author_posts_link() ?></p>
 		<div class="post-excerpt">
 			<?php the_excerpt(); /* the excerpt is loaded to help avoid duplicate content issues */ ?>
 		</div>
-
-		<div class="post-meta">
+<!-- <div class="post-meta">
 			<p><?php comments_popup_link('No Comments', '1 Comment', '% Comments'); ?></p>
 			<p><?php _e('Categories: '); the_category(', ') ?></p>
 			<p><?php if (the_tags('Tags: ', ', ', ' ')); ?></p>
-		</div><!--.postMeta-->
-	</div><!--.post-single-->
+		</div>-->
+	</article>
 <?php endwhile; else: ?>
 	<div class="no-results">
 		<p><strong><?php _e('There has been an error.'); ?></strong></p>

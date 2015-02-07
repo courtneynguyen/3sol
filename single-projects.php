@@ -1,12 +1,7 @@
 
 <?php get_header(); ?>
-<header>
-<div class="container sm-container">
-	<h1 class="center-ltr" >Projects</h1>			
-</div>
-</header>
-</div>
-<div id="content" class="container sm-container">
+
+<div id="content" class="span8 middle">
 <div id="wrapper">
 <div id="start">
 			<h1 class="txt-center">Kitty Jump!</h1>

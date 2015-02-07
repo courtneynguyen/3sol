@@ -7,10 +7,11 @@
 	<h1 class="center-ltr" >Designs</h1>			
 </div>
 </header>
-<h2><?php the_title(); ?> </h2>
+
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 		<article>
+			<h2><?php the_title(); ?> </h2>
 
 		<?php /* edit_post_link('<small>Edit this entry</small>','',''); */ ?>
 	<?php /*if ( has_post_thumbnail() ) { /* loades the post's featured thumbnail, requires Wordpress 3.0+ */ /* echo '<div class="featured-thumbnail">'; the_post_thumbnail(); echo '</div>'; } */ ?>
