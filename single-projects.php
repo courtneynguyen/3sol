@@ -1,22 +1,35 @@
 
-<?php get_header(); ?>
 
-<div id="content" class="span8 middle">
+<?php get_header(); ?> 
+<?php 
+/*
+(WP Post Template: Kitty Jump Template
+ */
+?>
+
+<header>
+<div class="container sm-container">
+	<h1><?php the_title(); ?></h1>			
+</div>
+</header>
+</div>
+<div id="content" class="container sm-container">
 <div id="wrapper">
-<div id="start">
+<?php the_content(); ?>
+		<div id="start">
 			<h1 class="txt-center">Kitty Jump!</h1>
 			<div class="">
 				<div class="">
 					<h3>This is you:</h3>
-					<img src="/wp-content/themes/3sol/images/kitty.png" />
+					<img src="/wp-content/themes/3sol/js/kitty_jump/public/images/kitty.png" />
 					<p class="float-rt">
-						You have 9 lives: <img src="/wp-content/themes/3sol/images/life.png" />x9
+						You have 9 lives: <img src="/wp-content/themes/3sol/js/kitty_jump/public/images/life.png" />x9
 					</p>
 				</div>
 				<div class="">
 					<div class="">
 						<h3>Eat kibbles:</h3>
-						<img src="/wp-content/themes/3sol/images/kibble_O_lg.png"/><img src="/wp-content/themes/3sol/images/kibble_X_lg.png"/>
+						<img src="/wp-content/themes/3sol/js/kitty_jump/public/images/kibble_O_lg.png"/><img src="/wp-content/themes/3sol/js/kitty_jump/public/images/kibble_X_lg.png"/>
 						<p class="float-rt">
 						AVOID hitting kibbles... You will lose points!
 					</p>
@@ -24,7 +37,7 @@
 					<div class="">
 						<h3>Do <span class="bold">NOT</span> eat candy:</h3>
 
-						<img class="wd-100" src="/wp-content/themes/3sol/images/candy.png"/>
+						<img class="wd-100" src="/wp-content/themes/3sol/js/kitty_jump/public/images/candy.png"/>
 					</div>
 				</div>
 				<div class="">
@@ -47,14 +60,14 @@
 			<audio loop="true"></audio>
 			<canvas id="game"></canvas>
 		</div>
-		<script language="javascript" src="/wp-content/themes/3sol/js/jquery.min.js" type="text/javascript"></script>
-		<script language="javascript" src="/wp-content/themes/3sol/js/jquery.hotkeys.js" type="text/javascript"></script>
-		<script language="javascript" src="/wp-content/themes/3sol/js/key_status.js" type="text/javascript"></script>
-		<script language="javascript" src="/wp-content/themes/3sol/js/util.js" type="text/javascript"></script>
-		<script language="javascript" src="/wp-content/themes/3sol/js/sprite.js" type="text/javascript"></script>
+		<script language="javascript" src="/wp-content/themes/3sol/js/kitty_jump/public/js/jquery.min.js" type="text/javascript"></script>
+		<script language="javascript" src="/wp-content/themes/3sol/js/kitty_jump/public/js/jquery.hotkeys.js" type="text/javascript"></script>
+		<script language="javascript" src="/wp-content/themes/3sol/js/kitty_jump/public/js/key_status.js" type="text/javascript"></script>
+		<script language="javascript" src="/wp-content/themes/3sol/js/kitty_jump/public/js/util.js" type="text/javascript"></script>
+		<script language="javascript" src="/wp-content/themes/3sol/js/kitty_jump/public/js/sprite.js" type="text/javascript"></script>
 		<!-- <script language="javascript" src="js/sound.js" ></script> -->
-		<script language="javascript" type="text/javascript" src="/wp-content/themes/3sol/main.js"></script>
-</div>
+		<script language="javascript" type="text/javascript" src="/wp-content/themes/3sol/js/kitty_jump/public/js/main.js"></script>
 </div>
 <?php get_footer(); ?>
+
 
