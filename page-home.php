@@ -24,7 +24,9 @@
 </svg>
 <!-- <h1 class="no-tp hr txt-grad">my passion is to code, quest, and cat.</h1> -->
 	<div class="main-content">
+		<section>
 		<h1>The user matters.</h1>
+		</section>
 	</div>
 </div>
 
